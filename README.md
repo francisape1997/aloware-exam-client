@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Host config
+- Go to request.js and change the API_URL to your domain.
