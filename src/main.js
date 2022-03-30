@@ -2,9 +2,14 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'
+import mitt from 'mitt';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+const emitter = mitt();
 
-app.mount('#app')
+app.provide('emitter', emitter);
+
+app.use(router);
+
+app.mount('#app');
